@@ -81,3 +81,23 @@ expect(array).not_to start_with(2)
 ```
 
 #### Matchers relacionados a Hashes
+
+```
+# MatchInclude
+hash = { a: 7, b: 5 }
+
+# Verificar se um hash tem uma ou mais chaves
+expect(hash).to include(:a)
+expect(hash).to include(:a, :b)
+
+# Verificar se um hash tem um ou mais pares
+# de chave - valor
+expect(hash).to include(a: 7)
+expect(hash).to include(b: 5, a: 7)
+
+expect(hash).not_to include(:c)
+expect(hash).not_to include(a: 11)
+expect(hash).not_to include(a: 13, c: 11)
+expect(hash).not_to include(:c, :d)
+
+```
