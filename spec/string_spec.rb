@@ -23,7 +23,6 @@ RSpec.describe "String Matchers Examples" do
 	end
 
 	it "Should start with my own first name" do
-	# start_with (Head) 
 		expect(string).to start_with("gabriel")
 	end
 
