@@ -1,6 +1,7 @@
 
 ### Rspec Matchers:
 > Um matcher no RSpec é um objeto que verifica o comportamento esperado nos testes unitários
+> P/ iniciar o boiler de testes unitários, basta inserir no terminal o comando `rspec --init`
 
 ```
 expect(actual).to matcher(expected)
@@ -42,6 +43,7 @@ expect(a).to eql(b)   # passa quando a e b possuem
 > Verifica se um array é "igual" ao outro, independente da ordem dos seus elementos
 
 ```
+# MatchArray
 array = [1, 2, 3, 4]
 
 expect(array).to match_array([1, 2, 3, 4])
@@ -50,6 +52,32 @@ expect(array).to match_array([4, 3, 2, 1])
 expect(array).not_to match_array([1, 2, 3])
 expect(array).not_to match_array([1, 2, 3, 4, 5])”
 
+
+# MatchInclude
+array = [1, 2, 3, 4]
+
+expect(array).to include(1)
+expect(array).to include(1, 2, 3)
+expect(array).to include(1, 2, 3, 4)
+
+expect(array).not_to include(0)
+expect(array).not_to include(5)
+expect(array).not_to include(5, 6, 7, 8)
+expect(array).not_to include([1, 2, 3, 4])
+
+# end_with (Tail)
+array = [1, 2, 3, 4]
+
+expect(array).to end_with(4)
+expect(array).to end_with(3, 4)
+expect(array).not_to end_with(3)
+
+# start_with (Head)
+expect(array).to start_with(1)
+expect(array).to start_with(1, 2)
+expect(array).not_to start_with(2)
+
+
 ```
 
-> 
+#### Matchers relacionados a Hashes
