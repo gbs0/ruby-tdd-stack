@@ -8,7 +8,7 @@ expect(actual).to matcher(expected)
 expect(actual).to_not matcher(expected)
 ```
 
-#### • Matchers relacionados a truthy e falsy
+#### • Matchers relacionados a truthy e falsy (Booleans)
 > São matchers que testam se um objeto retorna como true ou false.
 
 ```
@@ -101,3 +101,35 @@ expect(hash).not_to include(a: 13, c: 11)
 expect(hash).not_to include(:c, :d)
 
 ```
+
+#### Matchers relacionados a Strings
+> Verifica o valor de uma string atráves de uma regex 
+
+```
+# Matcher Match
+string = "gabriel schiavo"
+
+expect(string).to match(/gabriel/)
+expect(string).to match(/chiav/)
+
+expect(string).not_to match(/silva/)
+expect(string).not_to match(/rafael/)” 
+
+# Include Matcher
+expect(string).to include("g")
+expect(string).to include("gabriel")
+expect(string).to include("gab", "sch")
+
+expect(string).not_to include("silva")
+expect(string).not_to include("gabs")”
+
+# start_with (Head) 
+expect(string).to start_with("gabriel")
+expect(string).not_to start_with("schiavo")
+
+# end_with (Tail)
+expect(string).to end_with("schiavo")
+expect(string).not_to end_with("gabriel")
+
+```
+
