@@ -22,13 +22,20 @@ RSpec.describe "String Matchers Examples" do
 		expect(string).not_to include("gabs")
 	end
 
-	it "Should star"
+	it "Should start with my own first name" do
 	# start_with (Head) 
 		expect(string).to start_with("gabriel")
+	end
+
+	it "Should NOT START with my last name" do
 		expect(string).not_to start_with("schiavo")
+	end
 
-	# end_with (Tail)
-	expect(string).to end_with("schiavo")
-	expect(string).not_to end_with("gabriel")
+	it "Should end with my last name" do
+		expect(string).to end_with("schiavo")
+	end
 
+	it "Should NOT END with my first name" do
+    expect(string).not_to end_with("gabriel")
+	end 
 end
