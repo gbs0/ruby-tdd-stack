@@ -1,4 +1,3 @@
-
 ### Rspec Matchers:
 > Um matcher no RSpec é um objeto que verifica o comportamento esperado nos testes unitários
 > P/ iniciar o boiler de testes unitários, basta inserir no terminal o comando `rspec --init`
@@ -133,3 +132,58 @@ expect(string).not_to end_with("gabriel")
 
 ```
 
+#### Predicate Matchers
+> São matchers dinâmicos que invocam métodos atráves da metaprogramação
+
+```
+
+hash = { key: 1 }
+# chama o método hash.has_key?(:key)
+expect(hash).to have_key(:key)
+
+# Predicates in some objects
+RSpec.describe Cart do
+  describe "#has_products?" do
+    it "returns true if it has products" do
+      product = Product.new
+      cart = Cart.new(product)
+      # chama o método cart.has_products?
+      expect(cart).to have_products
+    end
+  end
+end
+
+# be_a_method_name / be_an_method_name
+expect(cart).to be_a_thing    # chama o método cart.thing?
+expect(cart).to be_an_object  # chama o método cart.object?
+```
+
+#### Matchers para Exceptions
+> `RaiseError Matcher` é um método de um Matcher que levanta uma determinada exception
+
+```
+expect { raise }.to raise_error
+expect { raise }.to raise_exception
+
+# correto
+expect { raise }.to raise_error
+
+# correto
+expect do
+  raise
+end.to raise_error
+
+# errado
+expect(raise).to raise_error 
+
+# Verifica a exception levantada é de uma classe específicaß
+expect { raise RuntimeError }.to raise_error(RuntimeError)
+expect { raise StandarError }.to_not raise_error(RuntimeError)
+
+# Verifica a mensagem da exception levantada
+expect { raise "error" }.to raise_error("error")
+expect { raise "error" }.to_not raise_error("other error")
+
+```
+
+#### Matchers para comparação de números
