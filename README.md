@@ -246,5 +246,4 @@ expect(5).to be_a_kind_of(Object)
 
 expect(5).not_to be_a_kind_of(String)
 
-
 ```
