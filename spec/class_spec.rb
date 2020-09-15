@@ -9,7 +9,7 @@ RSpec.describe "Class matchers example" do
 		expect(5).not_to be_an_instance_of(Numeric)
 	end
 
-	it "Check if Int is NOT an instance of String Module"
+	it "Check if Int is NOT an instance of String Module" do
 		expect(5).not_to be_an_instance_of(String)
 	end
 
