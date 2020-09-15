@@ -223,3 +223,28 @@ expect(range).to cover(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 expect(range).to cover(5, 6, 7, 8)
 
 ```
+
+
+#### Matchers de Classe
+> Verifica qual a classe o objeto é
+
+```
+
+# be_an_instance_of verifica se o objeto é uma instância da
+# classe dada
+
+expect(5).to be_an_instance_of(Integer)
+
+expect(5).not_to be_an_instance_of(Numeric)
+expect(5).not_to be_an_instance_of(String)
+# be_a_kind_of verifica se o objeto é uma instância da classe
+# dada ou de uma subclasse da classe dada
+
+expect(5).to be_a_kind_of(Integer)
+expect(5).to be_a_kind_of(Numeric)
+expect(5).to be_a_kind_of(Object)
+
+expect(5).not_to be_a_kind_of(String)
+
+
+```
