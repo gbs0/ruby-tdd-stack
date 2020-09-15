@@ -186,4 +186,35 @@ expect { raise "error" }.to_not raise_error("other error")
 
 ```
 
-#### Matchers para comparação de números
+#### Matchers para comparação de números (Int)
+
+```
+
+pi_number = 3.14
+expect(pi_number).to eq(3.14)
+
+expect(7).to be < 10
+expect(7).to be > 1
+expect(7).to be <= 7
+expect(7).to be >= 7
+
+```
+
+#### Matchers de Floats
+> Normalmente utilizamos matchers que aproximam as casas decimais dos números fracionados
+
+```
+
+expect(Math::PI).to be_within(0.01).of(3.14)
+
+# Intervalo válido entre delta e o número esperado
+expect(actual).to be_within(delta).of(expected)
+
+```
+
+#### Matchers p/ Ranges
+
+```
+
+
+```
