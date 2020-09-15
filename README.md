@@ -6,6 +6,8 @@
 expect(actual).to matcher(expected)
 expect(actual).to_not matcher(expected)
 ```
+ 
+--- 
 
 #### Matchers relacionados a truthy e falsy (Booleans)
 > São matchers que testam se um objeto retorna como true ou false.
