@@ -1,7 +1,7 @@
 RSpec.describe "Class matchers example" do
 	# be_an_instance_of verifica se o objeto é uma instância da
 	# classe dada
-  it "Check if Int value  belongs to Integer Module" do
+	it "Check if Int value  belongs to Integer Module" do
 		expect(5).to be_an_instance_of(Integer)
 	end
 
@@ -29,5 +29,5 @@ RSpec.describe "Class matchers example" do
 
 	it "Check if Int is NOT kind of String Module" do
 		expect(5).not_to be_a_kind_of(String)
-  end
+	end
 end

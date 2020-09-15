@@ -35,6 +35,6 @@ RSpec.describe "String Matchers Examples" do
 	end
 
 	it "Should NOT END with my first name" do
-    expect(string).not_to end_with("gabriel")
+		expect(string).not_to end_with("gabriel")
 	end 
 end

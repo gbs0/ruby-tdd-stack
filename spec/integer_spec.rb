@@ -4,11 +4,11 @@ RSpec.describe "Integer Matchers Example" do
 	end
 
 	it "Compare if 7 is less than 10" do
-	  expect(7).to be < 10
+		expect(7).to be < 10
 	end
 
 	it "Compare if 7 is greater than 1" do
-	  expect(7).to be > 1
+		expect(7).to be > 1
 	end 
 
 	it "Compare if 7 is minor and equal to 7" do

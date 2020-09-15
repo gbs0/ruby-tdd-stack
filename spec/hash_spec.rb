@@ -1,9 +1,9 @@
 RSpec.describe "Hash Matchers Examples" do
-  hash = { a: 7, b: 5 }
-  it "Should include some predefined keys" do
-  expect(hash).to include(:a)
-  expect(hash).to include(:a, :b)
-  end
+	hash = { a: 7, b: 5 }
+	it "Should include some predefined keys" do
+		expect(hash).to include(:a)
+		expect(hash).to include(:a, :b)
+	end
 
 	it "Should include some predefined keys with values" do
 		expect(hash).to include(a: 7)
