@@ -7,7 +7,7 @@ expect(actual).to matcher(expected)
 expect(actual).to_not matcher(expected)
 ```
 
-#### • Matchers relacionados a truthy e falsy (Booleans)
+#### Matchers relacionados a truthy e falsy (Booleans)
 > São matchers que testam se um objeto retorna como true ou false.
 
 ```
@@ -21,7 +21,7 @@ expect(obj).to be_nil
 expect(obj).to be
 ```
 
-#### • Matchers de equidade
+#### Matchers de equidade
 > Compara se dois objetos são iguais, utilizando comparação genérica (==)
 
 ```
@@ -38,7 +38,7 @@ expect(a).to eql(b)   # passa quando a e b possuem
                       # o mesmo hash code (a.eql?(b))
 ```
 
-#### • Matchers relacionados a arrays
+#### Matchers relacionados a arrays
 > Verifica se um array é "igual" ao outro, independente da ordem dos seus elementos
 
 ```
