@@ -247,3 +247,37 @@ expect(5).to be_a_kind_of(Object)
 expect(5).not_to be_a_kind_of(String)
 
 ```
+
+#### Matchers de mudanças de estado ou valor
+> Usamos o `ChangeMatcher` quando queremos verificar que a execução de um bloco de código, cause uma mudança de estado em um objeto especifíco
+
+```
+
+RSpec.describe StateMachine do
+  describe "#start" do
+    it "Changes State Machine from :initial to :started" do
+    end
+  end
+end
+
+# Verifica que ao rodar Counter.increment o valor de
+# Counter.count é modificado em duas unidades
+expect {
+  Counter.increment
+}.to change { Counter.count }.by(2)
+
+# Verifica que ao tentar salvar um user com um atributo inválido
+# o valor de User.count não é modificado
+expect {
+  invalid_attributes = { name: nil }
+  user = User.new(invalid_attributes)
+  user.save
+}.to_not change(User, :count)
+
+# Verifica que ao adicionar alguns jogadores ao objeto team,
+# o valor de team.size é modificado por pelo menos uma unidade
+expect {
+  team.add_players(some_players)
+}.to change(team, :size).by_at_least(1)
+
+```
