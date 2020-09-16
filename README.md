@@ -185,7 +185,7 @@ expect(raise).to raise_error
 
 # Verifica a exception levantada é de uma classe específicaß
 expect { raise RuntimeError }.to raise_error(RuntimeError)
-expect { raise StandarError }.to_not raise_error(RuntimeError)
+expect { raise StandardError }.to_not raise_error(StandardError)
 
 # Verifica a mensagem da exception levantada
 expect { raise "error" }.to raise_error("error")
