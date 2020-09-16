@@ -1,4 +1,4 @@
-RSpec.describe "Hash Matchers Examples" do
+RSpec.describe "Hash Matchers unit" do
 	hash = { a: 7, b: 5 }
 	it "Should include some predefined keys" do
 		expect(hash).to include(:a)

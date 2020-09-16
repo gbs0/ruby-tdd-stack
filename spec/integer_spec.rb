@@ -1,4 +1,4 @@
-RSpec.describe "Integer Matchers Example" do
+RSpec.describe "Integer Matchers unit" do
 	it "Should accept 42 integer as test" do
 		expect(Math::PI).to be_within(0.01).of(3.14)
 	end

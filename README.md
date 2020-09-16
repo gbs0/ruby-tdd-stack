@@ -160,10 +160,13 @@ expect(cart).to be_a_thing    # chama o método cart.thing?
 expect(cart).to be_an_object  # chama o método cart.object?
 ```
 
-#### Matchers para Exceptions
+--- 
+
+####  Exceptions Matchers
 > `RaiseError Matcher` é um método de um Matcher que levanta uma determinada exception
 
 ```
+
 expect { raise }.to raise_error
 expect { raise }.to raise_exception
 
@@ -177,6 +180,8 @@ end.to raise_error
 
 # errado
 expect(raise).to raise_error 
+
+# TODOS ACIMA SÃO VALIDOS, PORÉM GERAM FALSOS POSITIVOS
 
 # Verifica a exception levantada é de uma classe específicaß
 expect { raise RuntimeError }.to raise_error(RuntimeError)

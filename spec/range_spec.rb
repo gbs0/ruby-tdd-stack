@@ -1,5 +1,5 @@
-RSpec.describe "Range Matchers Example" do
-	it "Should some intervals range value" do
+RSpec.describe "Range Matchers unit" do
+	it "Should accept some intervals range value" do
 		range = (1..10)
 
 		expect(range).to cover(1)
