@@ -18,4 +18,5 @@ RSpec.describe "Exception Matchers unit" do
   it "Expect a raise error with NameError" do
   	expect { raise NameError }.to raise_error(NameError)
   end
+
 end
