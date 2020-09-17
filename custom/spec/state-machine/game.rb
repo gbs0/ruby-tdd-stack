@@ -1,17 +1,21 @@
 class Game
   
   def initialize
-		state = :inital  	
+		@state = :inital  	
   end
 
   def start
   	set_state
   end
 
+  def state
+    @state
+  end
+
   private
 
   def set_state
-  	state = :started
+  	@state = :started
   end
 
 end
