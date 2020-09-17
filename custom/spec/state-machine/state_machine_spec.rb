@@ -1,6 +1,6 @@
 require_relative 'game'
 
-RSpec.describe Game do
+RSpec.describe "🔧 Bonus Matchers - Game State" do
   describe "#start" do
     it "Changes State Machine from :initial to :started" do
       game = Game.new

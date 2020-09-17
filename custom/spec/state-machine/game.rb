@@ -1,7 +1,7 @@
 class Game
   
   def initialize
-		@state = :inital  	
+		@state = :initial  	
   end
 
   def start
