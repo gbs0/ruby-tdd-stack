@@ -1,2 +1,2 @@
-require_relative("../custom/spec/state-machine/state_machine_spec.rb")
+require_relative("../custom/spec/state-machine/state_machine_spec")
 
