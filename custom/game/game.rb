@@ -13,7 +13,8 @@ class Game
   end
 
   def start
-  	set_state
+    set_state
+    draw_window
   end
 
   def state
@@ -22,6 +23,10 @@ class Game
 
   private
   
+  def draw_window
+    @window.show
+  end
+
   def set_enemy
     @enemy = []
   end
