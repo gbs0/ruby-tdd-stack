@@ -1,3 +1,5 @@
+require_relative "lib/window"
+
 class Game
   
   def initialize
@@ -5,12 +7,9 @@ class Game
     @window = GameWindow.new
   end
 
-  def update
-
-  end
 
   def draw
-    @enemy = GameEnemy.new
+    # @window.draw
   end
 
   def start
