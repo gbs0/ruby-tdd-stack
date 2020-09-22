@@ -1,3 +1,6 @@
+require_relative "cart"
+require_relative "product"
+
 RSpec.describe Cart do
   describe "#empty?" do
     it "returns true when the cart has no products" do
@@ -16,5 +19,4 @@ RSpec.describe Cart do
       expect(cart).to have_products
     end
   end
-
 end

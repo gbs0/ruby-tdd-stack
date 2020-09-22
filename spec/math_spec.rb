@@ -1,6 +1,6 @@
 RSpec.describe "Math Matchers unit" do
 	it "Should equals to PI value" do
-	  expect(Math::PI).to eq(3.14) # executa Math::PI == 3.14
+	  expect(Math::PI).to eq(3.141592653589793) # executa Math::PI == 3.14
 	end
 	
 	it "Should accept PI float value" do

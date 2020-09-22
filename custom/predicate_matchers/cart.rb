@@ -1,13 +1,10 @@
-class Card
+class Cart
  def initialize(product)
-   @product = product
    @products = {}
  end
 
- def empty
- end
-
  def has_products?
+   @products.empty?
  end
 
 end
