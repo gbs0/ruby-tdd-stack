@@ -1,3 +1,10 @@
+### Sobre o repositório:
+  Este repositório contém varios exemplos direcionados a pratica de `Test Driven Development` na linguagem Ruby, utilizando RSpec para testes unitários, com seus Matchers e funções descritos em detalhes.
+
+### Objetivo:
+  Sumarizar todos os tipos de Matchers relacionados tanto aos objetos primários em Ruby (Enumerators, Classes), quanto os Matchers especificos (Erros de Execução e Matchers Customizados)
+
+
 ### Rspec Matchers:
 > Um matcher no RSpec é um objeto que verifica o comportamento esperado nos testes unitários
 > P/ iniciar o boiler de testes unitários, basta inserir no terminal o comando `rspec --init`
