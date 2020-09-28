@@ -4,7 +4,7 @@ require_relative "product"
 RSpec.describe Cart do
   describe "#empty?" do
     it "returns true when the cart has no products" do
-      cart = Cart.new
+      cart = Cart.new(nil)
 
       # expect(cart.empty?).to be_truthy
       expect(cart).to be_empty # chama o método cart.empty?

@@ -7,4 +7,8 @@ class Cart
    @products.empty?
  end
 
+ def empty?
+   has_products?
+ end
+
 end
