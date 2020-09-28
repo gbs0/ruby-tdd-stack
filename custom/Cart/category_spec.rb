@@ -1,3 +1,4 @@
+require_relative "cart_spec"
 require_relative "subcategory"
 require_relative "category"
 

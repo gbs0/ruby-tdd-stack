@@ -1,2 +1,2 @@
-require_relative("../custom/Cart/cart_spec.rb")
+require_relative("../custom/Cart/category_spec.rb")
 
