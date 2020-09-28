@@ -1,4 +1,4 @@
-RSpec::Matchers.define :be_multiple_of do |expected|
+RSpec::Matchers.define :be_a_multiple_of do |expected|
 	match do |actual|
 		(actual % expected) == 0
 	end
@@ -12,11 +12,10 @@ RSpec.describe "Math Matchers unit" do
 	it "Should accept PI float value" do
 		expect(Math::PI).to be_within(0.01).of(3.14)
 	end
-end
 
-
-RSpec.describe "be_a_multiple_of custom Matcher" do
-	it "Verifies if a number is a multiple of another one" do
+	it "Verifies if a number is a multiple of another one with custom matcher" do
 		expect(21).to be_a_multiple_of(7)
+		expect(15).to be_a_multiple_of(3)
+    expect(7).not_to be_a_multiple_of(3)
 	end
 end
