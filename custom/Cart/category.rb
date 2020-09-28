@@ -1,11 +1,12 @@
 class Category
-  attr_reader :subcategories, :name
-
+  attr_reader :name
+  attr_accessor :products
+  
   def initialize(name)
   	@name = name
-  	@subcategories = []
+  	@products = []
   end
 
-  def add_subcategories(*subcategories)
+  def add_products(*products)
   end
 end 

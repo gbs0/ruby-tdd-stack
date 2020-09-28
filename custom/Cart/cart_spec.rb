@@ -1,5 +1,5 @@
-require_relative "cart"
 require_relative "product"
+require_relative "cart"
 
 RSpec.describe Cart do
   describe "#empty?" do
@@ -20,3 +20,4 @@ RSpec.describe Cart do
     end
   end
 end
+
