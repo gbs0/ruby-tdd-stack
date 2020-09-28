@@ -1,5 +1,4 @@
 class Product
-	def initialize(name)
-	  @name = name
+	def initialize
 	end
 end 
