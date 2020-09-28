@@ -13,4 +13,7 @@ class Category
 
   def add_subcategories(*subcategories)
   end
+
+  def contain_products(*products)
+  end
 end 

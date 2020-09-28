@@ -15,6 +15,7 @@ RSpec.describe Category do
 
   	eletronic_products = eletronics.subcategories.flat_map(&:products)
 
-  	expect(eletronic_products).to include("Macbook", "iPhone")
+  	# Método que verifica se contém produtos
+  	expect(eletronic_products).to contain_products("Macbook", "iPhone") # E evita falha por conter um array vazio no inicio
   end
 end
