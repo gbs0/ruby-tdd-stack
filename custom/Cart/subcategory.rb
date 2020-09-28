@@ -1,3 +1,5 @@
+require_relative "product"
+
 class Subcategory
   attr_reader :name
   
@@ -7,6 +9,7 @@ class Subcategory
   end
 
   def add_product(product)
-    @products << product
+    obj = Product.new(product)
+    @products << obj
   end
 end
