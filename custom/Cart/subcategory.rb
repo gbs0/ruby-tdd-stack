@@ -1,7 +1,7 @@
 require_relative "product"
 
 class Subcategory
-  attr_reader :name
+  attr_reader :name, :product
   
   def initialize(name)
   	@name = name
