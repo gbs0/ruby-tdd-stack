@@ -5,11 +5,10 @@ class Subcategory
   
   def initialize(name)
   	@name = name
-  	@products = []
+  	@product
   end
 
-  def add_product(product)
-    obj = Product.new(product)
-    @products << obj
+  def add_product(product_name)
+    @product = product_name
   end
 end

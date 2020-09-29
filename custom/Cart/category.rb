@@ -11,6 +11,9 @@ class Category
    @subcategories << subcategories
   end
 
+  def get_subcategories
+    @subcategories.flatten
+  end
   # def contain_products(*products)
   #   @products
   # end
