@@ -11,6 +11,7 @@ RSpec::Matchers.define :contain_products do |*products|
 		expect(subcategories_products & products).to eq products
 	end
 
+  # If test fail: 
 	failure_message do |category|
     "expected category '#{category.name}' " \
     "to contain products #{products}"
