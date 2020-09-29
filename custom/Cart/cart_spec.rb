@@ -13,7 +13,7 @@ RSpec.describe Cart do
 
   describe "#has_products?" do
     it "returns true if it has products" do
-      product = Product.new
+      product = Product.new("Macbook")
       cart = Cart.new(product)
       # chama o método cart.has_products?
       expect(cart).to have_products
