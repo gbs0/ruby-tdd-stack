@@ -6,10 +6,8 @@ require 'pry'
 RSpec::Matchers.define :contain_products do |*products|
 	match do |category|
     # subcategories_products = category.subcategories.flat_map(&:product)
-    subcategories_products = category.subcategories.product.flat_map(&:name)
-    category.subcategories.each{ |instance| instance.instance_of?(category.class) ? @instances.push(instance) : @instances  }
-    
-    # Quebra por conta de pry(#<RSpec::Matchers::DSL::Matcher>)> category.subcategories.each { |instance| p instance_of?(Subcategory) }
+    subcategories_products = category.subcategories.flat_map(&:product).flat_map(&:name)
+
 		expect(subcategories_products & products).to eq products
 	end
 
