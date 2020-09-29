@@ -11,4 +11,8 @@ class Subcategory
   def add_product(product_name)
     @product = product_name
   end
+
+  def product
+  	@product
+  end 
 end
