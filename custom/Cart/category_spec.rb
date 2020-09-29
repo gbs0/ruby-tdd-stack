@@ -33,6 +33,5 @@ RSpec.describe Category do
 
   	# Método que verifica se contém produtos
   	expect(eletronics).to contain_products("Macbook", "iPhone") # E evita falha por conter um array vazio no inicio
-
   end
 end
