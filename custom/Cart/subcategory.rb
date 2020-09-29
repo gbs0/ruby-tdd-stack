@@ -9,7 +9,7 @@ class Subcategory
   end
 
   def add_product(product_name)
-    @product = product_name
+    @product = Product.new(product_name)
   end
 
   def product

@@ -1,6 +1,5 @@
 class Category
   attr_reader :name
-  attr_accessor :subcategories
   
   def initialize(name)
   	@name = name
@@ -11,7 +10,7 @@ class Category
    @subcategories << subcategories
   end
 
-  def get_subcategories
+  def subcategories
     @subcategories.flatten
   end
   # def contain_products(*products)
