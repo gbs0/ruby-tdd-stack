@@ -3,14 +3,14 @@ RSpec.describe "The lazy-evaluated behavior of let" do
 
   let(:broken_operation) { raise "I'm broken" }
 
-  it "will call the method defined by let" do
+  it "Will call the method defined by let" do
     expect {
       expect(@foo).to eq("bar")
       broken_operation
     }.to raise_error("I'm broken")
   end
 
-  it "won't call the method defined by let" do
+  it "Won't call the method defined by let" do
     expect {
       expect(@foo).to eq("bar")
     }.not_to raise_error
