@@ -8,6 +8,7 @@ RSpec.describe "Stubs Matchers" do
 
      	loan_checker = LoanChecker.new
      	loan_evaluation = loan_checker.can_lend_to?(client)
+     	expect(loan_evaluation).to be_truthy
      end
    end
  end
