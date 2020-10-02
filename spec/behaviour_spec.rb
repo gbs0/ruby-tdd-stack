@@ -1,3 +1,13 @@
+class DeepThought
+	def initialize(printer)
+		@printer = printer
+	end
+
+	def print_the_answer
+		@printer.print("42")
+	end
+end
+
 RSpec.describe DeepThought do
   it "prints the answear to the ultimate question" do
     printer = double("printer")
@@ -11,3 +21,4 @@ RSpec.describe DeepThought do
     computer.print_the_answer
   end
 end
+
