@@ -1,5 +1,5 @@
 class LoanChecker
-  def can_land_to?(client)
-  	!client.debts
+  def can_lend_to?(client)
+  	!client.debt
   end
 end

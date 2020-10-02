@@ -1,3 +1,6 @@
+require_relative "client"
+require_relative "loan_checker"
+
 RSpec.describe "Stubs Matchers" do
  describe "LoanChecker Example" do
    # Testa se um cliente pode fazer um empréstimo
